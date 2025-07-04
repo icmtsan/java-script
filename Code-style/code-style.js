@@ -21,8 +21,8 @@ else {
 // 2 задание
 // Представьте, что вы работаете в команде, и вам нужно сделать код понятным для всех участников.
 // Перепишите следующий код, используя понятные и логичные имена переменных и функций:
-function numMultiplication(fristNumber, secondNumber) {
-  let multiplicationResult = fristNumber * secondNumber;
+function numMultiplication(firstNumber, secondNumber) {
+  let multiplicationResult = firstNumber * secondNumber;
   return multiplicationResult;
 }
 
