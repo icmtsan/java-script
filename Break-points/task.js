@@ -7,14 +7,14 @@ function hasEvenNumber(arr) {
         if (arr[i] % 2 === 0) {
             foundEven = true;
             break;
-        } else if (arr[i] % 2 !== 0) {
+        } else {
             foundEven = false;
         }
     }
     return foundEven;
 }
 
-console.log(hasEvenNumber([1, 3, 4, 5])); // Ожидается: true
+console.log(hasEvenNumber([  1, 3, 5, 3, 5])); // Ожидается: true
 
 
 
