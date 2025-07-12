@@ -25,7 +25,7 @@ const student = {
   },
 
   delayedGreet: function() {
-    setTimeout(() => this.greet, 1000);
+    setTimeout(() => this.greet(), 1000);
   }
 
 };
