@@ -48,15 +48,15 @@ const fullFunc = middleFunc();
 function createFibonacci() {
   const cache = [0, 1];
 
-  return function(a) {
-      if (cache[a] !== undefined) {
-          return cache[a];
+  return function(n) {
+      if (cache[n] !== undefined) {
+          return cache[n];
       }
 
-      for (let i = cache.length; i <= a; i++) {
+      for (let i = cache.length; i <= n; i++) {
           cache[i] = cache[i - 1] + cache[i - 2];
       }
-      return cache[a];
+      return cache[n];
   };
 }
 
