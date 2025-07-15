@@ -1,42 +1,42 @@
 // 1
 
 function createGreeter(name) {
-    let callCount = 0;
-    
-    return function() {
-      callCount++;
-      if (callCount === 1) {
-        return `Привет, ${name}! Ты зашел впервые!`;
-      } else {
-        return `Снова привет, ${name}! Это уже твой ${callCount} раз здесь!`;
-      }
-    };
-  }
+  let callCount = 0;
 
-  const greetAlex = createGreeter("Алекс");
-  
-  console.log(greetAlex());
-  console.log(greetAlex());
-  console.log(greetAlex());
+  return function () {
+    callCount++;
+    if (callCount === 1) {
+      return `Привет, ${name}! Ты зашел впервые!`;
+    } else {
+      return `Снова привет, ${name}! Это уже твой ${callCount} раз здесь!`;
+    }
+  };
+}
+
+const greetAlex = createGreeter("Алекс");
+
+console.log(greetAlex());
+console.log(greetAlex());
+console.log(greetAlex());
 
 //2
 
 function createFullName(name) {
-    const firstName = "Иван";
-    console.log(`Привет, ${name}`);
+  const firstName = "Иван";
+  console.log(`Привет, ${name}`);
 
-    function middleNameFunc() {
-        const middleName = "Иванович";
-        console.log(`Твое отчество: ${middleName}`);
+  function middleNameFunc() {
+    const middleName = "Иванович";
+    console.log(`Твое отчество: ${middleName}`);
 
-        function fullNameFunc() {
-            console.log(`Не забывай, кто ты: ${name} ${firstName} ${middleName}`);
-        }
-
-        return fullNameFunc;
+    function fullNameFunc() {
+      console.log(`Не забывай, кто ты: ${name} ${firstName} ${middleName}`);
     }
 
-    return middleNameFunc;
+    return fullNameFunc;
+  }
+
+  return middleNameFunc;
 }
 
 const greetBoba = createFullName("Боба");
@@ -48,15 +48,15 @@ const fullFunc = middleFunc();
 function createFibonacci() {
   const cache = [0, 1];
 
-  return function(n) {
-      if (cache[n] !== undefined) {
-          return cache[n];
-      }
-
-      for (let i = cache.length; i <= n; i++) {
-          cache[i] = cache[i - 1] + cache[i - 2];
-      }
+  return function (n) {
+    if (cache[n] !== undefined) {
       return cache[n];
+    }
+
+    for (let i = cache.length; i <= n; i++) {
+      cache[i] = cache[i - 1] + cache[i - 2];
+    }
+    return cache[n];
   };
 }
 

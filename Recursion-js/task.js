@@ -30,7 +30,7 @@ console.log(maxNumber(numbers));
 
 function createFibonacci() {
     const cache = [0, 1];
-  
+
     function fib(n) {
 
         if (cache[n] !== undefined) {
@@ -43,8 +43,8 @@ function createFibonacci() {
 
     return fib;
 }
-  
-  const question = createFibonacci();
-  
-  console.log(question(3));
-  console.log(question(8));
+
+const question = createFibonacci();
+
+console.log(question(3));
+console.log(question(8));
