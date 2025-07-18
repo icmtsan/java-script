@@ -31,8 +31,7 @@ const json2 = '{"name": "Lupa", "salary": 300000}';
 console.log(transfromJSON(json1));
 console.log(transfromJSON(json2));
 
-/* 3. Напиши функцию `checkAccess`, которая принимает возраст пользователя. Если возраст меньше 18, функция должна бросать ошибку с сообщением 
-"Доступ запрещен". Используйте `try...catch` для обработки ошибок и выведи сообщение об ошибке в консоль. */
+//3
 
 function checkAccess(age){
     try {
