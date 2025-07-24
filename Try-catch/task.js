@@ -22,6 +22,7 @@ function transfromJSON(jsonString) {
       return obj;
     } catch (error) {
       console.error('Ошибка при парсинге JSON:', error.message);
+      return null;
     }
   }
 
@@ -42,6 +43,7 @@ function checkAccess(age){
         
     } catch (error) {
         console.error('Доступ запрещен', error.message);
+        throw new Error('Вы должны быть старше 17 лет');
     }
 }
 

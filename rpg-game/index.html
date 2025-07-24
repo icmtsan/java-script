@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="fantasy-block">
+            <div class="stats">
+                <div class="stat">
+                    <div>Имя:</div>
+                    <div>Герой</div>
+                </div>
+                <div class="stat">
+                    <div>Уровень:</div>
+                    <div id="level">1</div>
+                </div>
+                <div class="stat">
+                    <div>Здоровье:</div>
+                    <div id="hp_hero">100</div>
+                </div>
+                <div class="stat">
+                    <div>Защита:</div>
+                    <div id="def_hero">20</div>
+                </div>
+                <div class="stat">
+                    <div>Атака:</div>
+                    <div id="atk_hero">8</div>
+                </div>
+                <div class="stat">
+                    <div>Инвентарь:</div>
+                    <div id="inventory">Меч</div>
+                </div>
+            </div>
+            <div class="location-img">
+                <div class="img-size" id="fantasy-village"><img src="./img/village.jpg" alt="village"></div>
+                <div class="img-size" id="fantasy-forest"><img src="./img/forest.jpg" alt=""></div>
+                <div class="img-size" id="fantasy-castle"><img src="./img/castle.jpg" alt=""></div>
+                <div class="img-size" id="fantasy-road"><img src="./img/road.jpg" alt=""></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="controls">
+            <button id="atk_button">Атаковать</button>
+            <button id="def_button">Защищаться</button>
+            <button id="inv_button">Использовать предмет</button>
+            <button id="heal_button">Отдохнуть</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="locations">
+            <div class="locaion">Выберите куда пойти</div>
+            <button class="action" id="village">Деревня</button>
+            <button class="action" id="forest">Лес</button>
+            <button class="action" id="castle">Замок</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="logs">
+            <div class="log-title">Ваше путешествие</div>
+            <div class="log-window"></div>
+        </div>
+    </div>
+
+    <script src="./game.js"></script>
+</body>
+
+</html>
