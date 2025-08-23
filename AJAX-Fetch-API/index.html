@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Создать новый пост</h1>
+
+    <form id="postForm">
+        <div>
+            <label for="userId">ID пользователя:</label>
+            <input type="number" id="userId" name="userId" required>
+        </div>
+
+        <div>
+            <label for="title">Заголовок:</label>
+            <input type="text" id="title" name="title" required>
+        </div>
+
+        <div>
+            <label for="body">Текст:</label>
+            <textarea id="body" name="body" rows="4" required></textarea>
+        </div>
+
+        <button type="submit">Создать пост</button>
+    </form>
+
+    <div id="responseContainer">
+        <h2>Ответ сервера:</h2>
+        <pre id="response"></pre>
+    </div>
+
+    <hr>
+
+    <div>
+        <button id="loadPostsBtn">Загрузить список постов</button>
+        <div id="postsContainer">
+            <h2>Список постов:</h2>
+            <ul id="postsList"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
