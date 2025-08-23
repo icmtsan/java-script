@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h2>Контактная информация</h2>
+
+    <form id="contactForm">
+        <div>
+            <label>Имя: <input type="text" name="name" required></label>
+        </div>
+        <div>
+            <label>Телефон: <input type="tel" name="phone" required></label>
+        </div>
+        <div>
+            <label>Email: <input type="email" name="email" required></label>
+        </div>
+        <button>Сохранить</button>
+    </form>
+
+    <div id="contactInfo">
+        <h3>Сохраненные данные:</h3>
+        <p id="displayData"></p>
+    </div>
+
+    <h2>Учет расходов</h2>
+
+    <form id="expenseForm">
+        <input type="text" name="description" placeholder="Описание" required>
+        <input type="number" name="amount" placeholder="Сумма" required>
+        <input type="date" name="date" required>
+        <button>Добавить</button>
+    </form>
+
+    <h3>Список расходов:</h3>
+    <ul id="expensesList"></ul>
+
+    <h2>Активное время на странице:</h2>
+    <p id="timer">0 секунд</p>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
