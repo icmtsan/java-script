@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <main class="container">
+        <h1 class="title">To-Do List</h1>
+
+        <form class="top-bar" id="task-form">
+            <input type="text" class="input-field" placeholder="Введите новую задачу...">
+            <button type="submit" class="add-task">Добавить</button>
+        </form>
+
+        <ul class="tasks-list" id="tasks-list">
+            <li class="task">
+                <input type="checkbox" class="task-checkbox">
+                <span class="task-text">Текст пример задачи</span>
+                <button class="reminder-btn" aria-label="Поставить напоминание">⏰</button>
+                <button class="delete-task" aria-label="Удалить задачу">×</button>
+            </li>
+        </ul>
+
+        <div class="bottom-bar">
+            <button class="filter-btn active" data-filter="all">Все</button>
+            <button class="filter-btn" data-filter="active">Активные</button>
+            <button class="filter-btn" data-filter="completed">Завершенные</button>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
