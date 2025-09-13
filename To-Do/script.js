@@ -2,9 +2,7 @@ const taskForm = document.getElementById('task-form');
 const taskInput = document.querySelector('.input-field');
 const tasksList = document.getElementById('tasks-list');
 const filterButtons = document.querySelectorAll('.filter-btn');
-
-let currentFilter = 'all';
-
+const currentFilter = 'all';
 const reminderTimers = {};
 
 function setReminder(taskId, taskText, seconds) {
@@ -153,7 +151,3 @@ filterButtons.forEach(button => {
 document.addEventListener('DOMContentLoaded', function () {
     fetchTasks();
 });
-
-const styleSheet = document.createElement('style');
-styleSheet.textContent = additionalStyles;
-document.head.appendChild(styleSheet);
