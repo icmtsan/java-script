@@ -9,7 +9,7 @@
 
 <body>
 
-    <h1>Создать новый пост</h1>
+    <!--     <h1>Создать новый пост</h1>
 
     <form id="postForm">
         <div>
@@ -43,6 +43,34 @@
             <h2>Список постов:</h2>
             <ul id="postsList"></ul>
         </div>
+    </div>
+     -->
+
+    <h1>Редактировать пост</h1>
+
+    <form id="editForm">
+        <div>
+            <label for="editId">ID поста:</label>
+            <input type="number" id="editId" name="editId" required>
+        </div>
+        <div>
+            <label for="editUserId">ID пользователя:</label>
+            <input type="number" id="editUserId" name="editUserId" required>
+        </div>
+        <div>
+            <label for="editTitle">Заголовок:</label>
+            <input type="text" id="editTitle" name="editTitle" required>
+        </div>
+        <div>
+            <label for="editBody">Текст:</label>
+            <textarea id="editBody" name="editBody" rows="4" required></textarea>
+        </div>
+        <button type="submit">Обновить пост</button>
+    </form>
+
+    <div id="editResponseContainer">
+        <h2>Ответ сервера:</h2>
+        <pre id="editResponse"></pre>
     </div>
 
     <script src="script.js"></script>
