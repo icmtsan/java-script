@@ -83,10 +83,15 @@ function displayPosts(posts) {
     limitedPosts.forEach(post => {
         const listItem = document.createElement('li');
         listItem.id = `post-${post.id}`;
+        
+        const bodyText = post.body.length > 100 
+            ? `${post.body.substring(0, 100)}...` 
+            : post.body;
+        
         listItem.innerHTML = `
                     <strong>ID: ${post.id}</strong> | <strong>User ID: ${post.userId}</strong>
                     <br><strong>Заголовок:</strong> ${post.title}
-                    <br><strong>Текст:</strong> ${post.body.substring(0, 100)}...
+                    <br><strong>Текст:</strong> ${bodyText}
                     <br>
                     <button onclick="deletePost(${post.id})">Удалить</button>
                     <br><br>
