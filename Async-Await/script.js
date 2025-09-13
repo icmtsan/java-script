@@ -15,7 +15,17 @@ main(); */
 
 //2
 
-async function fetchUserData(userId = 1) {
-    const response = await fetch(`https://randomuser.me/api/users/${userId}`);
-    return await response.json();
+async function fetchUserData() {
+    try {
+        const response = await fetch(`https://randomuser.me/api/`);
+
+        if (!response.ok) {
+            throw new Error('HTTP error');
+        }
+        return await response.json();
+        
+    } catch (error) {
+        console.error('Error fetching user data:', error.message);
+        throw error;
+    }
 }
